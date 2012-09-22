@@ -1,0 +1,31 @@
+<!DOCTYPE DunkelbuntPhotomanager [
+<!ELEMENT DunkelbuntPhotomanager (PhotoAlbum*, PhotoBox*)>
+<!ATTLIST DunkelbuntPhotomanager 
+anzPhotoAlbum	CDATA	#REQUIRED 
+anzPhotoBox	CDATA	#REQUIRED	
+>
+<!ELEMENT PhotoAlbum (PhotoAlbumEntry*)>
+<!ATTLIST PhotoAlbum
+name	CDATA	#REQUIRED
+anzEntries	CDATA	#REQUIRED 
+>
+<!ELEMENT PhotoAlbumEntry (Photo*, Text*, Sticker*)>
+<!ATTLIST PhotoAlbumEntry
+  id	CDATA	#REQUIRED>
+<!ELEMENT Photo EMPTY>
+<!ATTLIST Photo
+src	CDATA	#REQUIRED 
+name	CDATA	#REQUIRED 
+comment	CDATA	#IMPLIED
+>
+<!ELEMENT Text EMPTY>
+<!ATTLIST Text
+text	CDATA	#REQUIRED>
+<!ELEMENT Sticker EMPTY>
+<!ATTLIST Sticker
+id	CDATA	#REQUIRED><!-- ID ist die feste ID des Stickers-->
+<!ELEMENT Photobox (Photo*)>
+<!ATTLIST Photobox
+name	CDATA	#REQUIRED 
+anzPhotos	CDATA	#REQUIRED>
+]>
